@@ -8,7 +8,7 @@
     <!-- 使用router-view来引入 -->
     <!-- 直接通过导入的名称作为标签引入 -->
     <!-- 这里的number=15是向子组件里传递15这个字符串参数，如果需要传递值往下看~ -->
-    <componentA number=15></componentA>
+    <componentA number="15"></componentA>
     <!-- 如果需要传递值，则需要使用v-band也就是在前面加个：就可以传值了 -->
     <!-- 但需要注意的是在子组件接受的时候需要在那边声明类型，否则会报错 -->
     <component-a :text="list[1].name"></component-a>
@@ -16,8 +16,7 @@
     <!-- 但是此处需要注意的是，子组件一旦添加之后在父组件这边只要有任何调用此子组件的表情都会有相应的更新，但是能得到数据的只有 -->
     <!-- 添加了@Key的这个子组件标签可以触发 -->
     <component-a @my-event="getmyevent">
-      <p slot="header">这是头~</p>
-      只有这里才能点
+      <p slot="header">这是头~</p>只有这里才能点
       <p slot="footer">这是屁股~</p>
     </component-a>
     <!-- 也可以使用is来引入，但是在引入后，有大写的地方都要用-来转换成小写 -->
@@ -27,7 +26,8 @@
     <h1>{{ msg }}</h1>
     {{ num + 5 }}
     <!-- v-for渲染数组 -->
-    <div v-for="(item,index) in list" :key="item.index">
+    <!-- 使用animated动画效果，在class中使用animated 加动画名称即可 -->
+    <div v-for="(item,index) in list" :key="item.index" class="animated bounceInDown">
       <!-- 和ionic一样的用法，只不过要输出数列下表的时候index时要注意 -->
       {{item.name}}-{{item.price}}-{{index}}
     </div>
@@ -56,27 +56,27 @@
     <!-- 在表单中绑定数据使用v-model -->
     <div>
       <!-- 而在v-model中，有几种修饰符，修饰符用.xxx来引用，如：.lazy这个就是用来延迟同步数据，一般用于很消耗资源的方面 -->
-      <input type="text" name="" v-model="myVal">
+      <input type="text" name v-model="myVal">
     </div>
     <div>{{myVal}}</div>
     <div>{{myVal1}}</div>
     <div>{{myVal2}}</div>
     <div>
       <!-- checkbox的应用 -->
-      <input type="checkbox" name="" value="apple" v-model="myVal">
+      <input type="checkbox" name value="apple" v-model="myVal">
       <label>apple</label>
-      <input type="checkbox" name="" value="banana" v-model="myVal">
+      <input type="checkbox" name value="banana" v-model="myVal">
       <label>banana</label>
-      <input type="checkbox" name="" value="orange" v-model="myVal">
+      <input type="checkbox" name value="orange" v-model="myVal">
       <label>orange</label>
     </div>
     <div>
       <!-- radio的应用 -->
-      <input type="radio" name="" value="apple" v-model="myVal1">
+      <input type="radio" name value="apple" v-model="myVal1">
       <label>apple</label>
-      <input type="radio" name="" value="banana" v-model="myVal1">
+      <input type="radio" name value="banana" v-model="myVal1">
       <label>banana</label>
-      <input type="radio" name="" value="orange" v-model="myVal1">
+      <input type="radio" name value="orange" v-model="myVal1">
       <label>orange</label>
     </div>
     <div>
@@ -99,12 +99,8 @@
       </transition>
     </div>
     <!--mock模拟数据-->
-    <div v-for="(item,index) in mocklist" :key="index">
-      {{item.title}} {{item.content}}
-    </div>
-    <button @click="clickB">
-      跳转
-    </button>
+    <div v-for="(item,index) in mocklist" :key="index">{{item.title}} {{item.content}}</div>
+    <button @click="clickB">跳转</button>
     <button @click="gettext">点击</button>
   </div>
 </template>
@@ -204,8 +200,8 @@ export default {
     }
   },
   mounted() {
-    this.get();
-    this.get1();
+    // this.get();
+    // this.get1();
     this.gettext();
   },
   methods: {
@@ -265,28 +261,11 @@ export default {
         });
     },
     gettext() {
-      axios({
-        // url: "http://39.108.91.73/v101/warmcar-customer-pre-payment-service",
-        url: "http://localhost/v101/warmcar-customer-pre-payment-service",
-        method: "post",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        data: {
-          bizContent:
-            '{"paymentMny":1,"paymentType":"01","paymentCategory":"01","orderId":null,"couponId":"0"}',
-          customerId: 32848,
-          session: "90988e40b3b1fa36bd4d4dfc52869ace",
-          timestamp: 1533546400000,
-          sign: "3E854DEA076AB1BD194AAC345EC9E8A7"
-        }
+      axios.post("api/get_all_arms").then(res => {
+        console.log(res);
+      }).catch(err=>{
+        console.log(err)
       })
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {
-          console.log(err);
-        });
     }
   }
 };
@@ -298,7 +277,7 @@ h1,
 h2 {
   font-weight: normal;
 }
-// 激活阶段的动画展示
+/*激活阶段的动画展示*/
 .xiaoguo-enter-active,
 .xiaoguo-leave-active {
   transition: all 0.5s;

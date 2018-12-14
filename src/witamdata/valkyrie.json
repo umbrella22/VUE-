@@ -1,0 +1,282 @@
+[
+  {
+    "initial": "B",
+    "property": 1,
+    "pty": "机械",
+    "name": "琪亚娜·卡斯兰娜",
+    "ID": 2,
+    "Armor": "领域装·白练"
+  },
+  {
+    "initial": "A",
+    "property": 1,
+    "pty": "机械",
+    "name": "琪亚娜·卡斯兰娜",
+    "ID": 2,
+    "Armor": "女武神·游侠"
+  },
+  {
+    "initial": "S",
+    "property": 2,
+    "pty": "生物",
+    "name": "琪亚娜·卡斯兰娜",
+    "ID": 2,
+    "Armor": "白骑士·月光"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "琪亚娜·卡斯兰娜",
+    "ID": 2,
+    "Armor": "圣女祈祷"
+  },
+  {
+    "initial": "S",
+    "property": 2,
+    "pty": "生物",
+    "name": "琪亚娜·卡斯兰娜",
+    "ID": 2,
+    "Armor": "空之律者"
+  },
+  {
+    "initial": "B",
+    "property": 2,
+    "pty": "生物",
+    "name": "雷电芽衣",
+    "ID": 3,
+    "Armor": "脉冲装·绯红"
+  },
+  {
+    "initial": "A",
+    "property": 1,
+    "pty": "机械",
+    "name": "雷电芽衣",
+    "ID": 3,
+    "Armor": "影舞冲击"
+  },
+  {
+    "initial": "B",
+    "property": 2,
+    "pty": "生物",
+    "name": "雷电芽衣",
+    "ID": 3,
+    "Armor": "女武神·强袭"
+  },
+  {
+    "initial": "S",
+    "property": 3,
+    "pty": "异能",
+    "name": "雷电芽衣",
+    "ID": 3,
+    "Armor": "雷电女王的鬼铠"
+  },
+  {
+    "initial": "B",
+    "property": 3,
+    "pty": "异能",
+    "name": "布洛妮娅·扎伊切克",
+    "ID": 4,
+    "Armor": "女武神·战车"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "布洛妮娅·扎伊切克",
+    "ID": 4,
+    "Armor": "驱动装·山吹"
+  },
+  {
+    "initial": "A",
+    "property": 2,
+    "pty": "生物",
+    "name": "布洛妮娅·扎伊切克",
+    "ID": 4,
+    "Armor": "雪地狙击"
+  },
+  {
+    "initial": "S",
+    "property": 1,
+    "pty": "机械",
+    "name": "布洛妮娅·扎伊切克",
+    "ID": 4,
+    "Armor": "次元边界突破"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "布洛妮娅·扎伊切克",
+    "ID": 4,
+    "Armor": "银狼的黎明"
+  },
+  {
+    "initial": "S",
+    "property": 2,
+    "pty": "生物",
+    "name": "布洛妮娅·扎伊切克",
+    "ID": 4,
+    "Armor": "异度黑核侵蚀"
+  },
+  {
+    "initial": "B",
+    "property": 2,
+    "pty": "生物",
+    "name": "无量塔姬子",
+    "ID": 5,
+    "Armor": "站场疾风"
+  },
+  {
+    "initial": "A",
+    "property": 2,
+    "pty": "生物",
+    "name": "无量塔姬子",
+    "ID": 5,
+    "Armor": "女武神·凯旋"
+  },
+  {
+    "initial": "A",
+    "property": 1,
+    "pty": "机械",
+    "name": "无量塔姬子",
+    "ID": 5,
+    "Armor": "融核装·深红"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "无量塔姬子",
+    "ID": 5,
+    "Armor": "极地战刃"
+  },
+  {
+    "initial": "S",
+    "property": 3,
+    "pty": "异能",
+    "name": "无量塔姬子",
+    "ID": 5,
+    "Armor": "血色玫瑰"
+  },
+  {
+    "initial": "S",
+    "property": 1,
+    "pty": "机械",
+    "name": "无量塔姬子",
+    "ID": 5,
+    "Armor": "真红骑士·月蚀"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "德丽莎·阿波卡利斯",
+    "ID": 6,
+    "Armor": "女武神·誓约"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "德丽莎·阿波卡利斯",
+    "ID": 6,
+    "Armor": "樱火轮舞"
+  },
+  {
+    "initial": "S",
+    "property": 2,
+    "pty": "生物",
+    "name": "德丽莎·阿波卡利斯",
+    "ID": 6,
+    "Armor": "神恩颂歌"
+  },
+  {
+    "initial": "S",
+    "property": 1,
+    "pty": "机械",
+    "name": "德丽莎·阿波卡利斯",
+    "ID": 6,
+    "Armor": "处刑装·紫菀"
+  },
+  {
+    "initial": "A",
+    "property": 2,
+    "pty": "生物",
+    "name": "德丽莎·阿波卡利斯",
+    "ID": 6,
+    "Armor": "月下初拥"
+  },
+  {
+    "initial": "A",
+    "property": 1,
+    "pty": "机械",
+    "name": "卡莲·卡斯兰娜",
+    "ID": 7,
+    "Armor": "圣仪装·今样"
+  },
+  {
+    "initial": "S",
+    "property": 3,
+    "pty": "异能",
+    "name": "卡莲·卡斯兰娜",
+    "ID": 7,
+    "Armor": "第六夜想曲"
+  },
+  {
+    "initial": "A",
+    "property": 1,
+    "pty": "机械",
+    "name": "卡莲·卡斯兰娜",
+    "ID": 7,
+    "Armor": "原罪猎人"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "符华",
+    "ID": 8,
+    "Armor": "女武神·迅羽"
+  },
+  {
+    "initial": "A",
+    "property": 2,
+    "pty": "生物",
+    "name": "符华",
+    "ID": 8,
+    "Armor": "白夜执事"
+  },
+  {
+    "initial": "S",
+    "property": 3,
+    "pty": "异能",
+    "name": "符华",
+    "ID": 8,
+    "Armor": "炽翎"
+  },
+  {
+    "initial": "S",
+    "property": 1,
+    "pty": "机械",
+    "name": "符华",
+    "ID": 8,
+    "Armor": "影骑士·月轮"
+  },
+  {
+    "initial": "A",
+    "property": 3,
+    "pty": "异能",
+    "name": "丽塔·洛丝薇瑟",
+    "ID": 9,
+    "Armor": "黯蔷薇"
+  },
+  {
+    "initial": "A",
+    "property": 1,
+    "pty": "机械",
+    "name": "丽塔·洛丝薇瑟",
+    "ID": 9,
+    "Armor": "猎袭装·影铁"
+  }
+]
