@@ -7,11 +7,13 @@ import router from './router'
 import store from './store'
 import animated from 'animate.css'
 import iView from 'iview';
+import echarts from 'echarts'
 import 'iview/dist/styles/iview.css'
 
 // 并且使用它
 Vue.use(animated)
 Vue.use(iView)
+Vue.prototype.$echarts = echarts
 // 此处为mock的使用方法
 // require('./Mock/witam_server_mock')
 
