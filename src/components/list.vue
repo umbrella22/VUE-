@@ -1,7 +1,7 @@
 <template>
     <div>
         <Scroll :on-reach-bottom="jiazai">
-        <Card dis-hover v-for="(item, index) in list" :key="index" style="margin: 32px 0">
+        <Card dis-hover v-for="(item, index) in list" :key="index" style="margin: 32px 0" :class="[donghua]">
             Content {{ item }}
         </Card>
     </Scroll>
@@ -10,7 +10,8 @@
 <script>
 export default {
     data:()=>({
-        list:[1,2,3]
+        list:[1,2,3],
+        donghua:"animated bounceInRight",
     }),
     methods:{
         jiazai(){
