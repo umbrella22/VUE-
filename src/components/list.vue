@@ -3,7 +3,7 @@
     <!-- <Scroll :on-reach-bottom="jiazai"> -->
     <Card
       dis-hover
-      class="card"
+      class="card animated"
       :class="item.animateClass"
       v-if="item.show"
       v-for="(item, index) in animateList"
@@ -133,8 +133,7 @@ export default {
     //   });
     // },
     ch() {
-      this.box = this.$refs.box;
-      console.log(this.box)
+    
     },
     animateShow(parameter) {
       let param = {
