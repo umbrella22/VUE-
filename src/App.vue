@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    
-    <img src="./assets/logo.png">
-    <div class="animated bounceInRigth" v-text="totalPrice"></div>
+    <!-- <div class="animated bounceInRigth" v-text="totalPrice"></div> -->
     
     <!-- <addout></addout>
     <yu></yu> -->
@@ -10,7 +8,7 @@
     <!-- 这里的view指定新页面的位置 -->
     <router-view></router-view>
     <!-- 这里指的是新页面的入口 -->
-    <router-link :to="{path:'404'}">错误页面</router-link>
+    <!-- <router-link :to="{path:'404'}">错误页面</router-link> -->
   </div>
   <!-- -->
   <!-- <HelloWorld/> -->
@@ -39,12 +37,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

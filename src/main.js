@@ -15,7 +15,7 @@ Vue.use(animated)
 Vue.use(iView)
 Vue.prototype.$echarts = echarts
 // 此处为mock的使用方法
-// require('./Mock/witam_server_mock')
+// require('./Mock/mock1')
 
 
 

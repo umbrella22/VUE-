@@ -1,22 +1,93 @@
 import Mock from 'mockjs'
 
-Mock.mock('api/getNewList',{
-  'list':[
-    {
-      url: 'xxx',
-      title: 'title1'
+Mock.mock('api/getNewList', "post",
+  [{
+      text: "数据",
+      show: false,
+      animateClass: ''
     },
     {
-      url: 'xxx2',
-      title: 'title2'
+      text: "数据",
+      show: false,
+      animateClass: ''
     },
     {
-      url: 'xxx3',
-      title: 'title3'
+      text: "数据",
+      show: false,
+      animateClass: ''
     },
     {
-      url: 'xxx4',
-      title: 'title4'
+      text: "数据",
+      show: false,
+      animateClass: ''
     },
-  ]
-});
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+    {
+      text: "数据",
+      show: false,
+      animateClass: ''
+    },
+  ]);
