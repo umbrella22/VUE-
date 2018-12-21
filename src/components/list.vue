@@ -1,7 +1,7 @@
 <template>
     <div>
         <Scroll :on-reach-bottom="jiazai">
-        <Card dis-hover v-for="(item, index) in list" :key="index" style="margin: 32px 0" :class="[donghua]">
+        <Card dis-hover v-for="(item, index) in list" :key="index" style="margin: 32px 0">
             Content {{ item }}
         </Card>
     </Scroll>
