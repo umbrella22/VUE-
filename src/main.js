@@ -14,6 +14,15 @@ import 'iview/dist/styles/iview.css'
 Vue.use(animated)
 Vue.use(iView)
 Vue.prototype.$echarts = echarts
+// 引入ionic组件
+Vue.config.ignoredElements = [
+  'ion-app',
+  'ion-header',
+  'ion-navbar',
+  'ion-title',
+  'ion-content',
+  'ion-button'
+];
 // 此处为mock的使用方法
 // require('./Mock/mock1')
 

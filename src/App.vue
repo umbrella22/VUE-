@@ -7,7 +7,9 @@
     <!-- 列表效果 -->
     <!-- <list></list> -->
     <!-- 动画效果练习 -->
-    <dh/>
+    <!-- <dh/> -->
+    <!-- ionic页面演示 -->
+    <ionic/>
     <!-- 这里的view指定新页面的位置 -->
     <router-view></router-view>
     <!-- 这里指的是新页面的入口 -->
@@ -20,10 +22,11 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld'
-import addout from './components/addout.vue'
-import yu from './components/text.vue'
-import list from './components/list.vue'
-import dh from './components/echaet.vue'
+import addout from './components/addout'
+import yu from './components/text'
+import list from './components/list'
+import dh from './components/echaet'
+import ionic from './components/ionic'
 export default {
   name: 'app',
   components: {
@@ -31,7 +34,8 @@ export default {
     addout,
     yu,
     list,
-    dh
+    dh,
+    ionic
   },
   computed:{
     totalPrice(){
