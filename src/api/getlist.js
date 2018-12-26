@@ -1,8 +1,10 @@
-import request  from "../utils/request";
+import request from "../utils/request";
 
-export function getlist(){
+export default {
+  getlist() {
     return request({
-        url:"api/getNewList",
-        method:"post"
+      url: "api/getNewList",
+      method: "post"
     })
+  }
 }

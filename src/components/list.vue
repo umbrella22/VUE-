@@ -1,5 +1,8 @@
 <template>
-  <div ref="box" class="box">
+  <div
+    ref="box"
+    class="box"
+  >
     <!-- <Scroll :on-reach-bottom="jiazai"> -->
     <Card
       dis-hover
@@ -14,7 +17,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import api from "../api/getlist";
 export default {
   data() {
     return {
@@ -109,7 +112,7 @@ export default {
           animateClass: ""
         }
       ],
-      box:Object
+      box: Object
     };
   },
   mounted() {
@@ -118,7 +121,7 @@ export default {
       effect: "bounceInRight",
       arr: this.animateList
     });
-    this.ch()
+    this.ch();
   },
   methods: {
     // jiazai() {
@@ -133,7 +136,9 @@ export default {
     //   });
     // },
     ch() {
-    
+      api.getlist(res => {
+        console.log(res);
+      });
     },
     animateShow(parameter) {
       let param = {
@@ -158,8 +163,8 @@ export default {
 .box {
   background-color: #787878;
   overflow: hidden;
-  }
-  .card{
-    margin: 20px;
-  }
+}
+.card {
+  margin: 20px;
+}
 </style>
