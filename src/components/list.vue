@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="box"
-    class="box"
-  >
+  <div ref="box" class="box">
     <!-- <Scroll :on-reach-bottom="jiazai"> -->
     <Card
       v-if="item.show"
@@ -111,7 +108,7 @@ export default {
           show: false,
           animateClass: ""
         }
-      ],
+      ]
     };
   },
   mounted() {
