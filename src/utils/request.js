@@ -1,4 +1,4 @@
-import { axios } from "axios";
+import axios from "axios";
 // create an axios instance
 const service = axios.create({
   baseURL: process.env.BASE_API, // api 的 base_url

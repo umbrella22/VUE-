@@ -5,10 +5,10 @@
   >
     <!-- <Scroll :on-reach-bottom="jiazai"> -->
     <Card
+      v-if="item.show"
       dis-hover
       class="card animated"
       :class="item.animateClass"
-      v-if="item.show"
       v-for="(item, index) in animateList"
       :key="index"
     >{{ item.text }}</Card>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import api from "../api/getlist";
+// import api from "../api/getlist";
 export default {
   data() {
     return {
@@ -112,7 +112,6 @@ export default {
           animateClass: ""
         }
       ],
-      box: Object
     };
   },
   mounted() {
@@ -121,7 +120,7 @@ export default {
       effect: "bounceInRight",
       arr: this.animateList
     });
-    this.ch();
+    // this.ch();
   },
   methods: {
     // jiazai() {
