@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     initChart() {
-      // 默认将本页div挂载为echarts的挂载点,并且使用macarons主题
+      // 默认将本页div挂载为echarts的挂载点
       this.chart = this.$echarts.init(this.$el);
       this.setOptions(this.chartData);
     },
@@ -44,7 +44,8 @@ export default {
       this.chart.setOption({
         title: {
           text: "折线图主标题",
-          x: "center"
+          left: "center",
+          subtext: "副标题",
         },
         xAxis: {
           // data表示底部显示的数据
@@ -54,10 +55,34 @@ export default {
           // 未发现明显的改变
           axisTick: {
             show: false
+          },
+          // 设置X轴的轴线颜色
+          axisLine: {
+            lineStyle: {
+              color: "#E6E6F4"
+            }
+          },
+          // 设置X轴下的文字颜色
+          axisLabel: {
+            textStyle: {
+              color: "#3B3B53"
+            }
           }
         },
         // 折线图Y轴参数
         yAxis: {
+          // 设置Y轴的轴线颜色
+          axisLine: {
+            lineStyle: {
+              color: "#E6E6F4"
+            }
+          },
+          // 设置X轴下文字颜色
+          axisLabel: {
+            textStyle: {
+              color: "#C8C8C8"
+            }
+          },
           axisTick: {
             show: false
           },
@@ -73,8 +98,8 @@ export default {
         },
         // 设置图表在页面中的位置以及是否显示边数据
         grid: {
-          left: '3%',
-          right: '4%',
+          left: "3%",
+          right: "4%",
           bottom: 39,
           containLabel: true
         },
