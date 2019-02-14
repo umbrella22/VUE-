@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import NoFound from '../page/404/404'
 import echats from '../page/echarts'
 // 需要用到的页面都要在这里导入，这是非懒加载的形式
-// import index from '../components/HelloWorld.vue'
+import index from '../components/HelloWorld.vue'
+import ii from '../components/sroll.vue'
 
 Vue.use(Router)
 
@@ -18,9 +19,13 @@ export default new Router({
     //   redirect: '/index',
     // },
     // 除去重定向，在这里所有需要使用路由的页面都需要在这里注册，可以看到这里我将上面导入名为index的hellowword.vue这个文件作为首页
+    // {
+    //   path: '/',
+    //   component: echats
+    // },
     {
-      path: '/',
-      component: echats
+      path:'/',
+      component:index
     },
     {
       //这里指的是访问路径

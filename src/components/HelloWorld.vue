@@ -27,7 +27,7 @@
     {{ num + 5 }}
     <!-- v-for渲染数组 -->
     <!-- 使用animated动画效果，在class中使用animated 加动画名称即可 -->
-    <div v-for="(item,index) in list" :key="item.index" class="animated bounceInDown">
+    <div v-for="(item,index) in list" class="animated bounceInDown">
       <!-- 和ionic一样的用法，只不过要输出数列下表的时候index时要注意 -->
       {{item.name}}-{{item.price}}-{{index}}
     </div>
@@ -49,7 +49,7 @@
     <!-- v-on可缩写为@ -->
     <button v-on:click="clickA">按钮</button>
     <!-- v-for渲染对象 -->
-    <div v-for="value in objList" :key="value.id">
+    <div v-for="value in objList">
       <!-- 如果是对象的话，就直接写in前面的，会把对象展示出来 -->
       {{value}}
     </div>
@@ -82,15 +82,15 @@
     <div>
       <!-- select（下拉选择）的应用 -->
       <select v-model="myVal2">
-        <option v-for="item in list" :value="item.price" :key="item.id">{{item.name}}</option>
+        <option v-for="item in list" :value="item.price">{{item.name}}</option>
       </select>
     </div>
-    <div v-for="(value,key) in objList" :key="key">
+    <div v-for="(value,key) in objList">
       <!-- 如果是对象的话，就直接写in前面的，会把对象展示出来在必要时的时候需要展示key或者用到key值 -->
       {{key+value}}
     </div>
     <!-- v-for渲染组件 -->
-    <componentA v-for="(item,index) in list" :key="index"></componentA>
+    <componentA v-for="(item,index) in list"></componentA>
     <div>
       <!-- 过渡效果 -->
       <button v-on:click="show1">点一下</button>
@@ -99,7 +99,7 @@
       </transition>
     </div>
     <!--mock模拟数据-->
-    <div v-for="(item,index) in mocklist" :key="index">{{item.title}} {{item.content}}</div>
+    <div v-for="(item,index) in mocklist">{{item.title}} {{item.content}}</div>
     <button @click="clickB">跳转</button>
     <button @click="gettext">点击</button>
   </div>
@@ -110,6 +110,7 @@
 import componentA from "./a";
 import Vue from "Vue";
 import axios from "axios";
+import api from '../api/getlist'
 
 export default {
   // 注册组件
@@ -250,15 +251,18 @@ export default {
         });
     },
     get1() {
-      axios
-        .get("api/subPost")
-        .then(res => {
-          console.log(res);
-          //  this.mocklist = res.data.list;
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      // axios
+      //   .get("api/subPost")
+      //   .then(res => {
+      //     console.log(res);
+      //     //  this.mocklist = res.data.list;
+      //   })
+      //   .catch(err => {
+      //     console.log(err);
+      //   });
+      api.getdata().then(res=>{
+        console.log(res)
+      })
     },
     gettext() {
       axios.post("api/get_all_arms").then(res => {

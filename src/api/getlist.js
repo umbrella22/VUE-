@@ -6,5 +6,11 @@ export default {
       url: "api/getNewList",
       method: "post"
     })
+  },
+  getdata(){
+    return request({
+      url:'api/get_all_arms',
+      method:'post'
+    })
   }
 }
