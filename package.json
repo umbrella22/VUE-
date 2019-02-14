@@ -16,6 +16,7 @@
     "iview": "^3.2.2",
     "mint-ui": "^2.2.13",
     "mockjs": "^1.0.1-beta3",
+    "svg-progress-bar": "^0.1.17",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0"

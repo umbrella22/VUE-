@@ -115,43 +115,87 @@ export default {
         // // to a column of dataset.source by default.
         // series: [{ type: "bar" }, { type: "bar" }, { type: "bar" }]
         // 折线图
-        // 折线图x轴的参数
+        // 折线图标题
+        title: {
+          text: "折线图主标题",
+          left: "center",
+          subtext: "副标题"
+        },
         xAxis: {
           // data表示底部显示的数据
-          data: ["2h", "4h", "6h", "8h", "10h", "12h", "14h","16h","18h","20h","22h","24h"],
+          data: Xdata,
           // 影响折线图是否从头开始
           boundaryGap: false,
           // 未发现明显的改变
           axisTick: {
             show: false
+          },
+          // 设置X轴的轴线颜色
+          axisLine: {
+            lineStyle: {
+              color: "#E6E6F4"
+            }
+          },
+          // 设置X轴下的文字颜色
+          axisLabel: {
+            textStyle: {
+              color: "#3B3B53"
+            }
           }
         },
         // 折线图Y轴参数
         yAxis: {
+          // 设置Y轴的轴线颜色
+          axisLine: {
+            lineStyle: {
+              color: "#E6E6F4"
+            }
+          },
+          // 设置X轴下文字颜色
+          axisLabel: {
+            textStyle: {
+              color: "#C8C8C8"
+            }
+          },
           axisTick: {
             show: false
           },
-          splitNumber:10
+          splitNumber: 10
         },
-        // 和触摸有关
-        tooltip: {
-          trigger: "axis",
-          axisPointer: {
-            type: "cross"
-          },
-          padding: [5, 10]
-        },
+        // 鼠标悬浮时显示此项
+        // tooltip: {
+        //   trigger: "axis",
+        //   axisPointer: {
+        //     type: "cross"
+        //   },
+        //   padding: [5, 10]
+        // },
         // 设置图表在页面中的位置以及是否显示边数据
         grid: {
-          left: 10,
-          right: 10,
-          bottom: 20,
-          top: 30,
+          left: "3%",
+          right: "4%",
+          bottom: 39,
           containLabel: true
         },
         // 线条名称
         legend: {
-          data: ["橘线", "蓝线"]
+          data: [
+            {
+              name: "橘线",
+              icon: "rect",
+              textStyle: {
+                color: "#333333"
+              }
+            },
+            {
+              name: "蓝线",
+              icon: "rect",
+              textStyle: {
+                color: "#333333"
+              }
+            }
+          ],
+          y: "bottom"
         },
         // 线条样式设置
         series: [
@@ -160,8 +204,36 @@ export default {
             // 设置是否平缓
             // smooth: true,
             type: "line",
-
+            color:'#EEB947',
             itemStyle: {
+              normal: {
+                // 设置折线中的线条粗细和颜色
+                lineStyle: {
+                  // 系列级个性化折线样式
+                  width: 2,
+                  color: "#E5BD62" //折线的颜色
+                }
+              },
+              // 点击折线之后,上面每个点的颜色
+              // emphasis: {
+              //   color: "#E5BD62",
+              //   lineStyle: {
+              //     // 系列级个性化折线样式
+              //     width: 1,
+              //     color: "#E5BD62"
+              //   }
+              // }
+            }, //线条样式
+            symbolSize: 0, //折线点的大小
+            // 是否显示每个点的数据,并确定其显示的位置
+            // label: {
+            //   normal: {
+            //     show: false,
+            //     position: "top"
+            //   }
+            // },
+            // 图形区域填充样式
+            areaStyle: {
               normal: {
                 //颜色渐变函数 前四个参数分别表示四个位置依次为左、下、右、上
                 color: new this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
@@ -177,34 +249,10 @@ export default {
                     offset: 1,
                     color: "#fff" // 100% 处的颜色
                   }
-                ]), //背景渐变色
-                // 设置折线中的线条粗细和颜色
-                lineStyle: {
-                  // 系列级个性化折线样式
-                  width: 2,
-                  color: "#E5BD62" //折线的颜色
-                }
-              },
-              // 点击折线之后,上面每个点的颜色
-              emphasis: {
-                color: "#E5BD62",
-                lineStyle: {
-                  // 系列级个性化折线样式
-                  width: 1,
-                  color: "#E5BD62"
-                }
+                ]) //背景渐变色
               }
-            }, //线条样式
-            symbolSize: 0, //折线点的大小
-            // 是否显示每个点的数据,并确定其显示的位置
-            // label: {
-            //   normal: {
-            //     show: false,
-            //     position: "top"
-            //   }
-            // },
-            areaStyle: { normal: {} },
-            data: [10, 12, 61, 34, 15, 60, 65,56,51,64,15,20],
+            },
+            data: Odata,
             animationDuration: 1000,
             animationEasing: "cubicInOut"
           },
@@ -214,7 +262,36 @@ export default {
             type: "line",
             itemStyle: {
               normal: {
-                //颜色渐变函数 前四个参数分别表示四个位置依次为左、下、右、上
+                // 
+                color:'#60B5EC',
+                // 设置折线中的线条粗细和颜色
+                lineStyle: {
+                  // 系列级个性化折线样式
+                  width: 2,
+                  color: "#60B5EC" //折线的颜色
+                }
+              },
+              // 点击折线之后,上面每个点的颜色
+              // emphasis: {
+              //   color: "#60B5EC",
+              //   lineStyle: {
+              //     // 系列级个性化折线样式
+              //     width: 1,
+              //     color: "#60B5EC"
+              //   }
+              // }
+            }, //线条样式
+            symbolSize: 0, //折线点的大小
+            // 是否显示每个点的数据,并确定位置
+            // label: {
+            //   normal: {
+            //     show: false,
+            //     position: "top"
+            //   }
+            // },
+            // 图形区域填充样式
+            areaStyle: { normal: {
+              //颜色渐变函数 前四个参数分别表示四个位置依次为左、下、右、上
                 color: new this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
                   {
                     offset: 0,
@@ -229,35 +306,10 @@ export default {
                     color: "#fff" // 100% 处的颜色
                   }
                 ]), //背景渐变色
-                // 设置折线中的线条粗细和颜色
-                lineStyle: {
-                  // 系列级个性化折线样式
-                  width: 2,
-                  color: "#60B5EC" //折线的颜色
-                }
-              },
-              // 点击折线之后,上面每个点的颜色
-              emphasis: {
-                color: "#60B5EC",
-                lineStyle: {
-                  // 系列级个性化折线样式
-                  width: 1,
-                  color: "#E5BD62"
-                }
-              }
-            }, //线条样式
-            symbolSize: 0, //折线点的大小
-            // 是否显示每个点的数据,并确定位置
-            // label: {
-            //   normal: {
-            //     show: false,
-            //     position: "top"
-            //   }
-            // },
-            areaStyle: { normal: {} },
+            } },
 
             // 每个点的数据
-            data: [20, 82, 91, 54, 62, 40, 45,20,55,94,10,55,20],
+            data: Bdata,
             // 动画速度和动画时间
             animationDuration: 1000,
             animationEasing: "quadraticOut"
