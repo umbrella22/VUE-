@@ -9,7 +9,6 @@ import animated from 'animate.css'
 import echarts from 'echarts'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css'
-import svg from 'svg-progress-bar'
 // import MintUI from 'mint-ui'
 // import 'mint-ui/lib/style.css'
 
@@ -17,7 +16,6 @@ import svg from 'svg-progress-bar'
 // 并且使用它
 Vue.use(animated)
 Vue.use(iView)
-Vue.use(svg,{componentName:'percent-bar'})
 // Vue.use(MintUI)
 Vue.prototype.$echarts = echarts
 // 引入ionic组件

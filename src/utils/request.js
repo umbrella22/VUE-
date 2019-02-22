@@ -15,7 +15,7 @@ service.interceptors.response.use(function (response) {
   return Promise.reject(error);
 });
 // 此处为请求发送拦截器，可以在数据发送之前对数据进行操作，比如使用qs等工具进行序列化操作等
-server.interceptors.request.use(function (config) {
+service.interceptors.request.use(function (config) {
   // 如若不清楚可在控制台查看此输出
   console.log(config)
   // 此输出可查看到当前处于什么环境下，一般用于调整配置
